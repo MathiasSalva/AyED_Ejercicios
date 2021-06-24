@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ejercicio_32.dir/main.cpp.o"
-  "Ejercicio_32"
+  "CMakeFiles/Ejercicio_32.dir/main.cpp.obj"
+  "Ejercicio_32.exe"
+  "Ejercicio_32.exe.manifest"
   "Ejercicio_32.pdb"
+  "libEjercicio_32.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

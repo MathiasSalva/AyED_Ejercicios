@@ -1,1 +1,3 @@
-/usr/bin/c++ -g CMakeFiles/Ejercicio_32.dir/main.cpp.o -o Ejercicio_32 
+"C:\Program Files\JetBrains\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Ejercicio_32.dir/objects.a
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\Ejercicio_32.dir/objects.a @CMakeFiles\Ejercicio_32.dir\objects1.rsp
+C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Ejercicio_32.dir/objects.a -Wl,--no-whole-archive -o Ejercicio_32.exe -Wl,--out-implib,libEjercicio_32.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Ejercicio_32.dir\linklibs.rsp
