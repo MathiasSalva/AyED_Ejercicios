@@ -11,6 +11,7 @@ int main()
 
     cout << "Ingrese dos enteros distintos: " << endl;
     cout << "-------------------------------" << endl;
+    cin >> x >> x;
 
     if (x > y) 
     {
@@ -21,8 +22,5 @@ int main()
         cout << "El mayor es " << y << endl;
     }
     
-
-
-
     return 0;
 }
