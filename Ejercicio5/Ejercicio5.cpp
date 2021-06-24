@@ -10,8 +10,7 @@ int main()
     int x, y;
 
     cout << "Ingrese dos enteros distintos: " << endl;
-
-    cin >> x >> y;
+    cout << "-------------------------------" << endl;
 
     if (x > y) 
     {
