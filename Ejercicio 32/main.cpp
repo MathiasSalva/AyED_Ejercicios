@@ -21,7 +21,7 @@ using namespace std;
 
 int main() {
     unsigned int vuelos;
-    unsigned int n_vuelo;
+    unsigned int n_vuelo, n_vuelo_recaudo;
     unsigned int asientos;
     int asientos_ocupados;
     int llenos_seguidos = 0, racha = 0;
@@ -31,7 +31,7 @@ int main() {
     int pasajero = 0;
     char str_pasaporte[30], str_n_vuelo[30], str_pago[30];
     char datos_pasajero[5000] = "", datos_vuelo[10000] = "", datos_totales[50000] = "";
-    float pago, total_vuelo = 0, total_mes = 0;
+    float pago, total_vuelo = 0, total_mes = 0, mayor_recaudo = 0;
     char destino[51];
     int pasaporte = 1;
 
@@ -120,6 +120,13 @@ int main() {
         strcat_s(datos_vuelo, "\n\r");
 
         total_mes += total_vuelo;
+
+        if (total_vuelo > mayor_recaudo){
+            mayor_recaudo = total_vuelo;
+            n_vuelo_recaudo = n_vuelo;
+
+        }
+
         pasajero = 0;
     }
     strcat_s(datos_totales, datos_vuelo);
@@ -128,6 +135,7 @@ int main() {
     cout << endl;
     cout << "Total recaudado en el mes: $" << total_mes << endl;
     cout << "Cantidad de veces seguidas que se dieron vuelos completos: " << racha << endl;
+    cout << "Numero de vuelo que mayor recaudo: " << n_vuelo_recaudo << endl;
 
 
     return 0;
