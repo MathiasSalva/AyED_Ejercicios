@@ -24,6 +24,8 @@ int main() {
     unsigned int n_vuelo;
     unsigned int asientos;
     int asientos_ocupados;
+    int llenos_seguidos = 0, racha = 0;
+    bool lleno;
     float porc_asientos_ocupados, porc_asientos_libres;
     char str_porc_ocupados[15], str_porc_libres[15];
     int pasajero = 0;
@@ -79,16 +81,34 @@ int main() {
         porc_asientos_ocupados = (asientos_ocupados * 100) / asientos;
         porc_asientos_libres = ((asientos - pasajero) * 100) / asientos;
 
+        // Check vuelos llenos
+        if (!(asientos - asientos_ocupados)) {
+            lleno = true;
+        } else {
+            lleno = false;
+        }
+        // Contador de racha
+        if (lleno){
+            llenos_seguidos++;
+        } else {
+            llenos_seguidos = 0;
+        }
+        // Racha maxima
+        if (llenos_seguidos > racha){
+            racha = llenos_seguidos;
+        }
+
         sprintf(str_porc_libres, "%f", porc_asientos_libres);
         sprintf(str_porc_ocupados, "%f", porc_asientos_ocupados);
         sprintf(str_n_vuelo, "%i", n_vuelo);
         fflush(stdout);
+        strcat_s(datos_vuelo, "\n=============================================\n");
         strcat_s(datos_vuelo, "Nro de vuelo: ");
         strcat_s(datos_vuelo, str_n_vuelo);
         strcat_s(datos_vuelo, "         ");
         strcat_s(datos_vuelo, "Destino: ");
         strcat_s(datos_vuelo, destino);
-        strcat_s(datos_vuelo, "\n=========================================");
+        strcat_s(datos_vuelo, "=============================================");
         strcat_s(datos_vuelo, datos_pasajero);
         strcat_s(datos_vuelo, "\n");
         strcat_s(datos_vuelo, "% de Asientos Libres de vuelo: ");
@@ -96,8 +116,7 @@ int main() {
         strcat_s(datos_vuelo, "\n");
         strcat_s(datos_vuelo, "% de Asientos Ocupados del vuelo: ");
         strcat_s(datos_vuelo, str_porc_ocupados);
-        strcat_s(datos_vuelo, "\n=========================================");
-        strcat_s(datos_vuelo, "\n=========================================");
+        strcat_s(datos_vuelo, "\n=============================================");
         strcat_s(datos_vuelo, "\n\r");
 
         total_mes += total_vuelo;
@@ -106,6 +125,9 @@ int main() {
     strcat_s(datos_totales, datos_vuelo);
 
     cout << datos_vuelo;
+    cout << endl;
+    cout << "Total recaudado en el mes: $" << total_mes << endl;
+    cout << "Cantidad de veces seguidas que se dieron vuelos completos: " << racha << endl;
 
 
     return 0;
