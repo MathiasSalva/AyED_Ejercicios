@@ -1,0 +1,3 @@
+C:/Users/matts/RepoUTN/AyED_Ejercicios/Ejercicio39/cmake-build-debug/CMakeFiles/Ejercicio39.dir
+C:/Users/matts/RepoUTN/AyED_Ejercicios/Ejercicio39/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/matts/RepoUTN/AyED_Ejercicios/Ejercicio39/cmake-build-debug/CMakeFiles/rebuild_cache.dir

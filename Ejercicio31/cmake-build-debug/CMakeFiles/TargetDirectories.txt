@@ -1,3 +1,0 @@
-C:/Users/mathias.salva/CLionProjects/Ejercicio 31/cmake-build-debug/CMakeFiles/Ejercicio_31.dir
-C:/Users/mathias.salva/CLionProjects/Ejercicio 31/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mathias.salva/CLionProjects/Ejercicio 31/cmake-build-debug/CMakeFiles/rebuild_cache.dir
