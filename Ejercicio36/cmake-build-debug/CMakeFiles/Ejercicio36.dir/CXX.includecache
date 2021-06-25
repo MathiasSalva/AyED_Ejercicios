@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mathias.salva/CLionProjects/git-tuto/AyED_Ejercicios/Ejercicio36/main.cpp
+iostream
+-
+cstring
+-
+
