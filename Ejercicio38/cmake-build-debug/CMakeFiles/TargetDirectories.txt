@@ -1,0 +1,3 @@
+C:/Users/mathias.salva/CLionProjects/git-tuto/AyED_Ejercicios/Ejercicio38/cmake-build-debug/CMakeFiles/Ejercicio38.dir
+C:/Users/mathias.salva/CLionProjects/git-tuto/AyED_Ejercicios/Ejercicio38/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mathias.salva/CLionProjects/git-tuto/AyED_Ejercicios/Ejercicio38/cmake-build-debug/CMakeFiles/rebuild_cache.dir
