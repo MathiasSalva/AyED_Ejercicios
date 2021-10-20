@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mathias.salva/CLionProjects/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_11/main.cpp
+iostream
+-
+time.h
+-
+

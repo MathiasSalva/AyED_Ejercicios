@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mathias.salva/CLionProjects/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_09/main.cpp
+iostream
+-
+cstring
+-
+conio.h
+-
+stdio.h
+-
+stdlib.h
+-
+

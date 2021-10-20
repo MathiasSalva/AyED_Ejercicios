@@ -6,7 +6,7 @@ using namespace std;
 void invert(int vec[], int i, int tam)
 {
     int aux;
-    if (i < tam/2) // 
+    if (i < tam/2) //
     {
         aux = vec[i];
         vec[i] = vec[tam-1-i];
