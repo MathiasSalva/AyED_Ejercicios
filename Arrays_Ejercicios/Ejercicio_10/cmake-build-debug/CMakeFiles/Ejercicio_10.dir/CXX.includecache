@@ -6,8 +6,10 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mathias.salva/CLionProjects/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_10/main.cpp
+C:/Users/matts/RepoUTN/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_10/main.cpp
 iostream
+-
+string.h
 -
 cstdio
 -
@@ -16,5 +18,7 @@ cstdlib
 cstring
 -
 conio.h
+-
+stdlib.h
 -
 
