@@ -1,3 +1,0 @@
-C:/Users/matts/RepoUTN/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_13_Pilas/cmake-build-debug/CMakeFiles/Ejercicio_13_Pilas.dir
-C:/Users/matts/RepoUTN/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_13_Pilas/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/matts/RepoUTN/AyED_Ejercicios/Arrays_Ejercicios/Ejercicio_13_Pilas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
