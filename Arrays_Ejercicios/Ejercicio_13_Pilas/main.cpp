@@ -1,5 +1,6 @@
 #include <iostream>
 #define VACIO -999999
+#define TAM 20
 using namespace std;
 
 void inicializarVacio(int vec[], int tam){
@@ -24,6 +25,18 @@ bool queue(int vec[], int tam, int el){
 
 bool unqueue(int vec[], int tam){
     //TODO Funcion para sacar primer elemento de la fila y mover el resto una posicion menos
+    if (vec[0] == VACIO)
+        return false;
+    else{
+        for (int i = 0; i < tam && vec[i] != VACIO; i++){
+            if (i == tam - 1){
+                vec[i] = VACIO;
+            }
+            else
+                vec[i] = vec[i+1];
+        }
+        return true;
+    }
 }
 
 void mostrarVector(int vec[], int tam){
@@ -33,16 +46,27 @@ void mostrarVector(int vec[], int tam){
 
 int main() {
 
-    int vec[20];
-    inicializarVacio(vec, 20);
+    int vec[TAM], numero_allenar = 0;
+    bool vacio = true, lleno = true;
+    inicializarVacio(vec, TAM);
 
-    queue(vec, 20, 1);
-    queue(vec, 20, 2);
-    queue(vec, 20, 3);
-    queue(vec, 20, 4);
-    queue(vec, 20, 5);
+    while (lleno){
+        numero_allenar++;
+        mostrarVector(vec, TAM);
+        cout << endl;
+        lleno = queue(vec, TAM, numero_allenar);
 
-    mostrarVector(vec, 20);
+    }
+
+    cout << endl;
+    cout << "*************************" << endl;
+    while(vacio){
+        mostrarVector(vec, TAM);
+        vacio = unqueue(vec, TAM);
+        cout << endl;
+    }
+    cout << "El vector esta vacio" << endl;
+
 
 
     return 0;
