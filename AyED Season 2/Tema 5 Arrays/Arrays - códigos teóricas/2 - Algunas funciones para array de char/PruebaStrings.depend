@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1402575321 source:c:\files\pruebastrings\main.cpp
+	<iostream>
+	<string.h>
+
+1402575770 source:d:\clases 2014\ayed2014\arrays y strings\pruebastrings\main.cpp
+	<iostream>
+	<string.h>
+	<stdio.h>
+

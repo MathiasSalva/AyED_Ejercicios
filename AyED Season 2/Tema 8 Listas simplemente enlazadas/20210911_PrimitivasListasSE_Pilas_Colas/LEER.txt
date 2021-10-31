@@ -1,0 +1,4 @@
+1 - PilasYColasAPartirdelUltimoCodigo: Armado de pilas y colas a partir del código de la clase teórica
+anterior. Teniendo ya los fundamentos de listas SE, nos armamos las funciones push y pop para una pila
+y queue y unqueue para una cola.
+2 - Primitivas ListasSE: Primitivas completas para manejo de listasSE
