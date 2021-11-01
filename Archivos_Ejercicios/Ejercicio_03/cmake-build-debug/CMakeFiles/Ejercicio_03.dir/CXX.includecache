@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/matt/CLionProjects/RepoUTN/AyED_Ejercicios/Archivos_Ejercicios/Ejercicio_03/main.cpp
+iostream
+-
+

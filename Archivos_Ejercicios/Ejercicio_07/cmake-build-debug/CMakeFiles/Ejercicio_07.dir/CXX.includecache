@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/matt/CLionProjects/RepoUTN/AyED_Ejercicios/Archivos_Ejercicios/Ejercicio_07/main.cpp
+iostream
+-
+cstring
+-
+curses.h
+/home/matt/CLionProjects/RepoUTN/AyED_Ejercicios/Archivos_Ejercicios/Ejercicio_07/curses.h
+

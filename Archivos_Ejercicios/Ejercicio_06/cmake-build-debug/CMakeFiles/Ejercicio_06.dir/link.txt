@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Ejercicio_06.dir/main.cpp.o -o Ejercicio_06  -lncurses 
