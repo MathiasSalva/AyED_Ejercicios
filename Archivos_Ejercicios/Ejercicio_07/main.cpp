@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <stdlib.h>
+
 
 using namespace std;
 
@@ -104,16 +106,56 @@ bool buscarDNI(char ruta[], char dni[], Alumno &al){
         return false;
 }
 
-void ordenarPorLegajo(){
+void ordenarPorLegajo(char ruta[]){
     //TODO Funcion para ordernar el archivo por legajo
+    FILE *fp;
+    fp = fopen(ruta, "rb+");
+    int tamStruct, tamArchivo;
+    Alumno al, al_aux;
+    fseek(fp, 0, SEEK_END);
+    tamStruct = sizeof(Alumno);
+    tamArchivo = ftell(fp);
+    rewind(fp);
+
+    for (int i = 0; i < tamArchivo; i += tamStruct){
+
+        for (int j = 0; j < tamArchivo - tamStruct; j += tamStruct){
+
+            fread(&al, tamStruct, 1, fp);
+            fread(&al_aux, tamStruct, 1, fp);
+
+            if (atoi(al.legajo) > atoi(al_aux.legajo)){
+
+                fseek(fp, -(tamStruct * 2), SEEK_CUR);
+                fwrite(&al_aux, tamStruct, 1, fp);
+                fwrite(&al, tamStruct, 1, fp);
+                fseek(fp, -tamStruct, SEEK_CUR);
+
+            }
+
+            else {
+                fseek(fp, -tamStruct, SEEK_CUR);
+            }
+        }
+        rewind(fp);
+    }
+
+
 }
 
 int main() {
     int opcion;
     bool salir = false;
     Alumno alumno_buscado;
-    char ruta[200] = "/home/matt/CLionProjects/RepoUTN/AyED_Ejercicios/"
-                     "Archivos_Ejercicios/carpetadearchivos/Ejercicio_07.bin";
+    #ifdef _WIN32
+    char ruta[200] = R"(C:\Users\mathias.salva\CLionProjects\AyED_Ejercicios\Archivos_Ejercicios\carpetadearchivos\Ejercicio_07.bin)";
+    #endif
+    if (!ruta){
+        char ruta[200] = "/home/matt/CLionProjects/RepoUTN/AyED_Ejercicios/"
+                   "Archivos_Ejercicios/carpetadearchivos/Ejercicio_07.bin";
+    }
+
+
 
     char legajo_buscado[10];
     char dni_buscado[9];
@@ -155,8 +197,9 @@ int main() {
                 } else
                     cout << "No se encontro alumno o no se pudo leer archivo" << endl;
                break;
-//            case 5:
-//                break;
+            case 5:
+                ordenarPorLegajo(ruta);
+                break;
             case 6:
                 salir = true;
                 break;
